@@ -11,7 +11,7 @@ RSpec.describe TTY::Command, "#run" do
     expect(err).to eq("")
   end
 
-  it "runs command successfully with logging" do
+  it "runs command successfully with logging", :focus do
     output = StringIO.new
     uuid= "xxxx"
     allow(SecureRandom).to receive(:uuid).and_return(uuid)
