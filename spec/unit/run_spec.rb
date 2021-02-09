@@ -11,7 +11,7 @@ RSpec.describe TTY::Command, "#run" do
     expect(err).to eq("")
   end
 
-  it "runs command successfully with logging", :focus do
+  it "runs command successfully with logging" do
     output = StringIO.new
     uuid= "xxxx"
     allow(SecureRandom).to receive(:uuid).and_return(uuid)
@@ -161,7 +161,7 @@ RSpec.describe TTY::Command, "#run" do
     ])
   end
 
-  it "does not persist environment variables" do
+  it "does not persist environment variables", :focus do
     output = StringIO.new
     uuid= "xxxx"
     allow(SecureRandom).to receive(:uuid).and_return(uuid)
